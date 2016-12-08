@@ -1,0 +1,30 @@
+# ~/.tmuxinator/dataflow.yml
+
+name: frontend
+root: ~/Code/zopim/zopim-metrics-pipelines
+
+windows:
+  - editor:
+        layout: 71b4,317x67,0,0[318x54,0,0,0,318x12,0,55{158x12,0,55,4,159x12,159,55,5}]
+        panes:
+        - vim
+        - git fetch
+        - #empty
+  - kafka:
+        layout: 71b4,317x67,0,0[318x54,0,0,0,318x12,0,55{158x12,0,55,4,159x12,159,55,5}]
+        pre:
+        - cd ../zopim-kafka-gcp
+        panes:
+        - vim
+        - git fetch
+        - #empty
+  - stream-api:
+        pre:
+        - cd ../zopim-stream-api
+        panes:
+        - vim
+        - git fetch
+        - #empty
+  - examples:
+        - cd /Users/thuynh/Code/DataflowJavaSDK-examples && vim
+
