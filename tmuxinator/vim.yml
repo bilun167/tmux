@@ -1,0 +1,20 @@
+# ~/.tmuxinator/vim.yml
+
+name: vim
+root: ~/Code/vim
+
+windows:
+  - vim:
+        layout: 71b4,317x67,0,0[318x54,0,0,0,318x12,0,55{158x12,0,55,4,159x12,159,55,5}]
+        panes:
+        - vim
+        - ls -lah
+        - cd ~/.vim/bundle && ls
+  - tmux:
+        layout: 71b4,317x67,0,0[318x54,0,0,0,318x12,0,55{158x12,0,55,4,159x12,159,55,5}]
+        pre:
+        - cd ../tmux
+        panes:
+        - vim
+        - ls -lah
+        - cd ~/.tmuxinator/ && ls -lah
